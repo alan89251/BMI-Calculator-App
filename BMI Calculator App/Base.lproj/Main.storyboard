@@ -8,22 +8,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--BMI Tracking-->
-        <scene sceneID="knJ-K7-4ic">
-            <objects>
-                <viewController id="mqP-fU-6vN" customClass="BMITrackingScreenViewController" customModule="BMI_Calculator_App" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="82F-tz-sQ7">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="g4A-Ka-vzG"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="BMI Tracking" id="YSN-DA-frf"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="UK1-bl-Ff7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="772" y="102"/>
-        </scene>
         <!--Personal Information-->
         <scene sceneID="r3q-SY-EOJ">
             <objects>
@@ -215,12 +199,31 @@
                     </tabBar>
                     <connections>
                         <segue destination="xqR-j1-FAo" kind="relationship" relationship="viewControllers" id="2Os-cV-34n"/>
-                        <segue destination="mqP-fU-6vN" kind="relationship" relationship="viewControllers" id="1p9-8N-RfV"/>
+                        <segue destination="fyQ-ei-Xg4" kind="relationship" relationship="viewControllers" id="TFE-Zd-ii4"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hdz-Y0-SQr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-296" y="466"/>
+        </scene>
+        <!--BMI Tracking-->
+        <scene sceneID="SNn-aQ-DyK">
+            <objects>
+                <tableViewController id="fyQ-ei-Xg4" customClass="BMITrackingScreenTableViewController" customModule="BMI_Calculator_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="0tg-ID-Uy6">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <connections>
+                            <outlet property="dataSource" destination="fyQ-ei-Xg4" id="h9Y-xG-Upf"/>
+                            <outlet property="delegate" destination="fyQ-ei-Xg4" id="3my-nE-IQ6"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="BMI Tracking" id="4Ak-xy-BpW"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jkp-jD-MnK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="771" y="143"/>
         </scene>
     </scenes>
     <resources>

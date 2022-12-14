@@ -14,7 +14,11 @@
 		91097F6C294868F200DF881C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91097F6B294868F200DF881C /* Assets.xcassets */; };
 		91097F6F294868F200DF881C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91097F6D294868F200DF881C /* LaunchScreen.storyboard */; };
 		91A10408294871EC00B63793 /* PersonalInformationScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A10407294871EC00B63793 /* PersonalInformationScreenViewController.swift */; };
-		91A1040A2948722C00B63793 /* BMITrackingScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A104092948722C00B63793 /* BMITrackingScreenViewController.swift */; };
+		91E028212949A5B600A826A3 /* BMIRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E028202949A5B600A826A3 /* BMIRecord.swift */; };
+		91E028232949A67B00A826A3 /* BMIRecordList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E028222949A67B00A826A3 /* BMIRecordList.swift */; };
+		91FA2F6929495F9A0000C4D0 /* BMITrackingScreenTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FA2F6829495F9A0000C4D0 /* BMITrackingScreenTableViewController.swift */; };
+		91FA2F6C2949605F0000C4D0 /* BMITrackingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FA2F6A2949605F0000C4D0 /* BMITrackingTableViewCell.swift */; };
+		91FA2F6D2949605F0000C4D0 /* BMITrackingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91FA2F6B2949605F0000C4D0 /* BMITrackingTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +31,11 @@
 		91097F6E294868F200DF881C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		91097F70294868F200DF881C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91A10407294871EC00B63793 /* PersonalInformationScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInformationScreenViewController.swift; sourceTree = "<group>"; };
-		91A104092948722C00B63793 /* BMITrackingScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMITrackingScreenViewController.swift; sourceTree = "<group>"; };
+		91E028202949A5B600A826A3 /* BMIRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMIRecord.swift; sourceTree = "<group>"; };
+		91E028222949A67B00A826A3 /* BMIRecordList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMIRecordList.swift; sourceTree = "<group>"; };
+		91FA2F6829495F9A0000C4D0 /* BMITrackingScreenTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMITrackingScreenTableViewController.swift; sourceTree = "<group>"; };
+		91FA2F6A2949605F0000C4D0 /* BMITrackingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMITrackingTableViewCell.swift; sourceTree = "<group>"; };
+		91FA2F6B2949605F0000C4D0 /* BMITrackingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BMITrackingTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +76,11 @@
 				91097F6D294868F200DF881C /* LaunchScreen.storyboard */,
 				91097F70294868F200DF881C /* Info.plist */,
 				91A10407294871EC00B63793 /* PersonalInformationScreenViewController.swift */,
-				91A104092948722C00B63793 /* BMITrackingScreenViewController.swift */,
+				91FA2F6829495F9A0000C4D0 /* BMITrackingScreenTableViewController.swift */,
+				91FA2F6A2949605F0000C4D0 /* BMITrackingTableViewCell.swift */,
+				91FA2F6B2949605F0000C4D0 /* BMITrackingTableViewCell.xib */,
+				91E028202949A5B600A826A3 /* BMIRecord.swift */,
+				91E028222949A67B00A826A3 /* BMIRecordList.swift */,
 			);
 			path = "BMI Calculator App";
 			sourceTree = "<group>";
@@ -134,6 +146,7 @@
 				91097F6F294868F200DF881C /* LaunchScreen.storyboard in Resources */,
 				91097F6C294868F200DF881C /* Assets.xcassets in Resources */,
 				91097F6A294868F000DF881C /* Main.storyboard in Resources */,
+				91FA2F6D2949605F0000C4D0 /* BMITrackingTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,10 +157,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91FA2F6929495F9A0000C4D0 /* BMITrackingScreenTableViewController.swift in Sources */,
+				91E028232949A67B00A826A3 /* BMIRecordList.swift in Sources */,
+				91FA2F6C2949605F0000C4D0 /* BMITrackingTableViewCell.swift in Sources */,
+				91E028212949A5B600A826A3 /* BMIRecord.swift in Sources */,
 				91097F67294868F000DF881C /* ViewController.swift in Sources */,
 				91A10408294871EC00B63793 /* PersonalInformationScreenViewController.swift in Sources */,
 				91097F63294868F000DF881C /* AppDelegate.swift in Sources */,
-				91A1040A2948722C00B63793 /* BMITrackingScreenViewController.swift in Sources */,
 				91097F65294868F000DF881C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
