@@ -41,9 +41,7 @@ class PersonalInformationScreenViewController: UIViewController {
         )
         
         // navigate to the BMI Tracking screen
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let toVC = storyboard.instantiateViewController(withIdentifier: "BMITrackingScreen") as! BMITrackingScreenTableViewController
-        self.navigationController?.pushViewController(toVC, animated: true)
+        self.tabBarController?.selectedIndex = 1
     }
     
     /// calculate the BMI
