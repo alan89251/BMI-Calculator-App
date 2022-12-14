@@ -23,12 +23,18 @@ class BMIRecordList {
     }
     
     /// add a bmi record to the list and save it to the persistant storage
-    func addBMIRecord(bmiRecord: BMIRecord) {
+    func addRecord(bmiRecord: BMIRecord) {
         let newBmiRecord = BMIRecord(id: UUID().uuidString,
                                      weight: bmiRecord.weight,
                                      bmi: bmiRecord.bmi,
                                      date: bmiRecord.date)
         bmiRecords[newBmiRecord.id] = newBmiRecord
+        saveBMIRecordList()
+    }
+    
+    /// remove bmi record from the list and delete it from the persistant storage
+    func removeRecord(record: BMIRecord) {
+        bmiRecords[record.id] = nil
         saveBMIRecordList()
     }
     

@@ -11,13 +11,13 @@
         <!--Personal Information-->
         <scene sceneID="r3q-SY-EOJ">
             <objects>
-                <viewController id="xqR-j1-FAo" customClass="PersonalInformationScreenViewController" customModule="BMI_Calculator_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PersonalInformationScreen" id="xqR-j1-FAo" customClass="PersonalInformationScreenViewController" customModule="BMI_Calculator_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WdY-28-XZ9">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7B3-SO-hfq">
-                                <rect key="frame" x="16" y="73" width="45" height="21"/>
+                                <rect key="frame" x="16" y="117" width="45" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="45" id="jbt-kC-yME"/>
                                 </constraints>
@@ -26,24 +26,24 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jhR-hi-p4n">
-                                <rect key="frame" x="146.66666666666666" y="73" width="30" height="21"/>
+                                <rect key="frame" x="146.66666666666666" y="117" width="30" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2U0-Cg-LXg">
-                                <rect key="frame" x="277" y="73" width="57" height="21"/>
+                                <rect key="frame" x="277" y="117" width="57" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a5t-my-FYo">
-                                <rect key="frame" x="16" y="102" width="97" height="34"/>
+                                <rect key="frame" x="16" y="146" width="97" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tc2-Hw-oLd">
-                                <rect key="frame" x="146.66666666666666" y="102" width="97" height="34"/>
+                                <rect key="frame" x="146.66666666666666" y="146" width="97" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="97" id="Bsn-4i-QSR"/>
                                 </constraints>
@@ -51,18 +51,18 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TZi-k0-aca">
-                                <rect key="frame" x="277" y="102" width="97" height="34"/>
+                                <rect key="frame" x="277" y="146" width="97" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Personal Information" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="czv-dh-0Pe">
-                                <rect key="frame" x="116.66666666666669" y="44" width="157" height="21"/>
+                                <rect key="frame" x="116.66666666666669" y="88" width="157" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Height" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gcM-m6-ABj">
-                                <rect key="frame" x="16" y="144" width="51" height="21"/>
+                                <rect key="frame" x="16" y="188" width="51" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="51" id="XvB-bB-uqs"/>
                                 </constraints>
@@ -71,7 +71,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weight" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gVy-6q-5b1">
-                                <rect key="frame" x="121" y="144" width="54" height="21"/>
+                                <rect key="frame" x="121" y="188" width="54" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="54" id="pYv-3G-im5"/>
                                 </constraints>
@@ -80,7 +80,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A2A-3M-4Ba">
-                                <rect key="frame" x="16" y="173" width="97" height="34"/>
+                                <rect key="frame" x="16" y="217" width="97" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="97" id="rqf-Os-FXY"/>
                                 </constraints>
@@ -88,18 +88,18 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2cD-GW-bxa">
-                                <rect key="frame" x="121" y="173" width="97" height="34"/>
+                                <rect key="frame" x="121" y="217" width="97" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BMI Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iu6-8F-mh1">
-                                <rect key="frame" x="16" y="215" width="78" height="21"/>
+                                <rect key="frame" x="16" y="259" width="78" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u0E-fZ-zQg">
-                                <rect key="frame" x="16" y="244" width="100" height="21"/>
+                                <rect key="frame" x="16" y="288" width="100" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="w4h-mn-BbB"/>
                                     <constraint firstAttribute="width" constant="100" id="yvh-qM-4wE"/>
@@ -109,13 +109,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BMI Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P9u-eZ-gCp">
-                                <rect key="frame" x="16" y="273" width="121" height="21"/>
+                                <rect key="frame" x="16" y="317" width="121" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T3r-G1-DWN">
-                                <rect key="frame" x="16" y="302" width="200" height="21"/>
+                                <rect key="frame" x="16" y="346" width="200" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="pVi-ez-a21"/>
                                     <constraint firstAttribute="height" constant="21" id="vgr-Ti-TPB"/>
@@ -125,16 +125,19 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ySz-Su-V25">
-                                <rect key="frame" x="226" y="173" width="137" height="32"/>
+                                <rect key="frame" x="226" y="217" width="137" height="32"/>
                                 <segments>
                                     <segment title="Metric"/>
                                     <segment title="Imperial"/>
                                 </segments>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IKO-bA-nFT">
-                                <rect key="frame" x="315" y="331" width="59" height="31"/>
+                                <rect key="frame" x="315" y="375" width="59" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Done"/>
+                                <connections>
+                                    <action selector="btnDone_onTouchUpInside:" destination="xqR-j1-FAo" eventType="touchUpInside" id="YfW-kn-IhE"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6ln-jf-GSf"/>
@@ -183,10 +186,39 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Personal Information" id="58Q-Eb-Jn1"/>
+                    <navigationItem key="navigationItem" id="Abp-Wo-UiD"/>
+                    <connections>
+                        <outlet property="ageTextField" destination="Tc2-Hw-oLd" id="98u-4b-pOO"/>
+                        <outlet property="bmiDescriptionLabel" destination="T3r-G1-DWN" id="lTL-kH-tHY"/>
+                        <outlet property="bmiScoreLabel" destination="u0E-fZ-zQg" id="MPp-7o-iCb"/>
+                        <outlet property="doneButton" destination="IKO-bA-nFT" id="cSh-yn-gRk"/>
+                        <outlet property="genderTextField" destination="TZi-k0-aca" id="rC5-jp-cbM"/>
+                        <outlet property="heightTextField" destination="A2A-3M-4Ba" id="5Fx-0O-eXy"/>
+                        <outlet property="nameTextField" destination="a5t-my-FYo" id="u3o-iK-Vpl"/>
+                        <outlet property="unitSegmentedControl" destination="ySz-Su-V25" id="sfI-Cp-phe"/>
+                        <outlet property="weightTextField" destination="2cD-GW-bxa" id="oJS-19-D8V"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="esU-h7-pvu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="770.76923076923072" y="825.35545023696682"/>
+            <point key="canvasLocation" x="1697" y="847"/>
+        </scene>
+        <!--Personal Information-->
+        <scene sceneID="mov-zP-R27">
+            <objects>
+                <navigationController id="U6N-rW-0gK" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Personal Information" id="2Pc-oR-mSd"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Zy8-rp-pfX">
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="xqR-j1-FAo" kind="relationship" relationship="rootViewController" id="6o2-8f-fwm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v2z-DL-9B2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="788" y="847"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="fbv-g4-fgO">
@@ -198,18 +230,18 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="xqR-j1-FAo" kind="relationship" relationship="viewControllers" id="2Os-cV-34n"/>
-                        <segue destination="fyQ-ei-Xg4" kind="relationship" relationship="viewControllers" id="TFE-Zd-ii4"/>
+                        <segue destination="U6N-rW-0gK" kind="relationship" relationship="viewControllers" id="8pX-cX-Wp4"/>
+                        <segue destination="cuD-Z0-EM0" kind="relationship" relationship="viewControllers" id="6hV-SP-rYG"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hdz-Y0-SQr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-296" y="466"/>
+            <point key="canvasLocation" x="-282" y="444"/>
         </scene>
         <!--BMI Tracking-->
         <scene sceneID="SNn-aQ-DyK">
             <objects>
-                <tableViewController id="fyQ-ei-Xg4" customClass="BMITrackingScreenTableViewController" customModule="BMI_Calculator_App" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="BMITrackingScreen" id="fyQ-ei-Xg4" customClass="BMITrackingScreenTableViewController" customModule="BMI_Calculator_App" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="0tg-ID-Uy6">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -220,10 +252,28 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="BMI Tracking" id="4Ak-xy-BpW"/>
+                    <navigationItem key="navigationItem" id="cGz-Jv-RnJ"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jkp-jD-MnK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="771" y="143"/>
+            <point key="canvasLocation" x="1698" y="92"/>
+        </scene>
+        <!--BMI Tracking-->
+        <scene sceneID="4c5-YV-Mfm">
+            <objects>
+                <navigationController id="cuD-Z0-EM0" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="BMI Tracking" id="44G-bV-aXN"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QEr-BC-yLf">
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="fyQ-ei-Xg4" kind="relationship" relationship="rootViewController" id="zOe-kL-nsn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZA7-nN-nsP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="788" y="92"/>
         </scene>
     </scenes>
     <resources>

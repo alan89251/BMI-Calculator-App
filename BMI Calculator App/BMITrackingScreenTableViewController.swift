@@ -35,6 +35,24 @@ class BMITrackingScreenTableViewController: UITableViewController {
         let data = bmiRecordList.getAllRecords()
         let cell = tableView.dequeueReusableCell(withIdentifier: BMITrackingTableViewCell.identifier, for: indexPath) as! BMITrackingTableViewCell
         cell.configure(record: data[indexPath.row], row: indexPath.row)
+        cell.delegate = self
         return cell
+    }
+}
+
+extension BMITrackingScreenTableViewController: BMITrackingTableViewCellDelegate {
+    /// handle the actions of delete the BMI record
+    func didDeleteBmiRecordAndTableViewCell(record: BMIRecord) {
+        bmiRecordList.removeRecord(record: record) // delete the BMI record from the list and the persistant storage
+        
+        // if all the records on the list are deleted, navigate to the personal information screen
+        if (bmiRecordList.count() == 0) {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let toVC = storyboard.instantiateViewController(withIdentifier: "PersonalInformationScreen") as! PersonalInformationScreenViewController
+            self.navigationController?.pushViewController(toVC, animated: true)
+        }
+        else {
+            tableView.reloadData() // reload the table view to remove the table view cell of the record from the table view
+        }
     }
 }
