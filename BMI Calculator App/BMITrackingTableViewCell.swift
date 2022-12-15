@@ -1,17 +1,21 @@
 //
 //  BMITrackingTableViewCell.swift
 //  BMI Calculator App
-//
-//  Created by bee on 13/12/2022.
+//  Author: Chun Fung Suen
+//  Student ID: 301277969
+//  Date: 15/12/2022
+//  Changes: Implement the logic for the UI controls
 //
 
 import UIKit
 
+/// delegate for handling the button events in the table cell
 protocol BMITrackingTableViewCellDelegate: AnyObject {
-    func didUpdateBmiRecordAndTableViewCell(record: BMIRecord)
-    func didDeleteBmiRecordAndTableViewCell(record: BMIRecord)
+    func didUpdateBmiRecordAndTableViewCell(record: BMIRecord) // handle the actions of update the BMI record
+    func didDeleteBmiRecordAndTableViewCell(record: BMIRecord) // handle the actions of delete the BMI record
 }
 
+/// Manage the logic of the BMI Tracking table view cell
 class BMITrackingTableViewCell: UITableViewCell {
     static let identifier: String = "BMITrackingTableViewCell"
     private var record: BMIRecord?

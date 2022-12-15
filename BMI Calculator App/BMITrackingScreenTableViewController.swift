@@ -1,12 +1,15 @@
 //
 //  BMITrackingScreenTableViewController.swift
 //  BMI Calculator App
-//
-//  Created by bee on 13/12/2022.
+//  Author: Chun Fung Suen
+//  Student ID: 301277969
+//  Date: 15/12/2022
+//  Changes: Implement the logic for the UI controls
 //
 
 import UIKit
 
+/// Manage the logic of the BMI Tracking Screen
 class BMITrackingScreenTableViewController: UITableViewController {
     private var bmiRecordList: BMIRecordList!
     
@@ -19,7 +22,7 @@ class BMITrackingScreenTableViewController: UITableViewController {
         tableView.rowHeight = 120
     }
     
-    // reload and update the bmi record list every time when the view is switched to
+    /// reload and update the bmi record list every time when the view is switched to
     override func viewDidAppear(_ animated: Bool) {
         tableView.reloadData()
     }
@@ -33,20 +36,23 @@ class BMITrackingScreenTableViewController: UITableViewController {
     
     // MARK: - Table view data source
 
+    /// return the number of sections in the table view
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
+    /// return the number of rows in the table view
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return bmiRecordList.count()
     }
     
+    /// create a table cell for the table view
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let data = bmiRecordList.getAllRecords()
         let cell = tableView.dequeueReusableCell(withIdentifier: BMITrackingTableViewCell.identifier, for: indexPath) as! BMITrackingTableViewCell
-        cell.configure(record: data[indexPath.row], row: indexPath.row)
+        cell.configure(record: data[indexPath.row], row: indexPath.row) // configure the cell by the bmi record
         cell.delegate = self
         return cell
     }

@@ -1,8 +1,10 @@
 //
-//  ViewController.swift
+//  RootViewController.swift
 //  BMI Calculator App
-//
-//  Created by bee on 13/12/2022.
+//  Author: Chun Fung Suen
+//  Student ID: 301277969
+//  Date: 15/12/2022
+//  Changes: Add ViewController for the tab bar
 //
 
 import UIKit

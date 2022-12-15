@@ -1,8 +1,10 @@
 //
 //  AddBmiRecordViewController.swift
 //  BMI Calculator App
-//
-//  Created by bee on 14/12/2022.
+//  Author: Chun Fung Suen
+//  Student ID: 301277969
+//  Date: 15/12/2022
+//  Changes: Implement the logic for the UI controls
 //
 
 import UIKit

@@ -1,12 +1,15 @@
 //
 //  PersonalInformationScreenViewController.swift
 //  BMI Calculator App
-//
-//  Created by bee on 13/12/2022.
+//  Author: Chun Fung Suen
+//  Student ID: 301277969
+//  Date: 15/12/2022
+//  Changes: Implement the logic for the UI controls
 //
 
 import UIKit
 
+/// Manage the logic of the Personal Information Screen
 class PersonalInformationScreenViewController: UIViewController {
     private var bmiRecordList: BMIRecordList!
     private var personalInformation: PersonalInformationScreenSetting!
@@ -59,6 +62,7 @@ class PersonalInformationScreenViewController: UIViewController {
         
     }
     
+    /// handle the event when the submit button is clicked
     @IBAction func btnSubmit_onTouchUpInside(_ sender: UIButton) {
         // save personal information to the persistent storage
         let name = nameTextField.text!
@@ -90,6 +94,7 @@ class PersonalInformationScreenViewController: UIViewController {
         bmiMessageLabel.text = getBMIMessage(bmiScore: bmiScore)
     }
     
+    /// handle the event when the done button is clicked
     @IBAction func btnDone_onTouchUpInside(_ sender: UIButton) {
         // navigate to the BMI Tracking screen
         self.tabBarController?.selectedIndex = 1

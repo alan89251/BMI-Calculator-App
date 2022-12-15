@@ -1,8 +1,10 @@
 //
 //  UpdateBmiRecordViewController.swift
 //  BMI Calculator App
-//
-//  Created by bee on 14/12/2022.
+//  Author: Chun Fung Suen
+//  Student ID: 301277969
+//  Date: 15/12/2022
+//  Changes: Implement the logic for the UI controls
 //
 
 import UIKit
@@ -37,7 +39,7 @@ class UpdateBmiRecordViewController: UIViewController {
         bmiRecord!.weight = Double(weightTextField.text!)!
         bmiRecord!.date = datePicker.date
         let unit = personalInformation.getUnit()! // get the unit of the weight and height from the user setting
-        var bmiScore = calculateBMI(height: height, weight: bmiRecord!.weight, unit: unit)
+        let bmiScore = calculateBMI(height: height, weight: bmiRecord!.weight, unit: unit)
         // round the bmi score to 1 d.p.
         bmiRecord!.bmi = round(bmiScore * 10.0) / 10.0
         

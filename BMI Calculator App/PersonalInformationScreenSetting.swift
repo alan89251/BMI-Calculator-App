@@ -1,8 +1,10 @@
 //
-//  PersonalInformation.swift
+//  PersonalInformationScreenSetting.swift
 //  BMI Calculator App
-//
-//  Created by bee on 14/12/2022.
+//  Author: Chun Fung Suen
+//  Student ID: 301277969
+//  Date: 15/12/2022
+//  Changes: Implement the class to manage the personal information screen 's settings in the memory and the persistent storage
 //
 
 import Foundation
