@@ -18,7 +18,19 @@ class BMITrackingScreenTableViewController: UITableViewController {
         tableView.dataSource = self
         tableView.rowHeight = 120
     }
-
+    
+    // reload and update the bmi record list every time when the view is switched to
+    override func viewDidAppear(_ animated: Bool) {
+        tableView.reloadData()
+    }
+    
+    /// navigate to the add bmi record screen
+    @IBAction func btnAdd_onClicked(_ sender: UIBarButtonItem) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let toVC = storyboard.instantiateViewController(withIdentifier: "AddBmiRecord") as! AddBmiRecordViewController
+        self.navigationController?.pushViewController(toVC, animated: true)
+    }
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -47,9 +59,7 @@ extension BMITrackingScreenTableViewController: BMITrackingTableViewCellDelegate
         
         // if all the records on the list are deleted, navigate to the personal information screen
         if (bmiRecordList.count() == 0) {
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let toVC = storyboard.instantiateViewController(withIdentifier: "PersonalInformationScreen") as! PersonalInformationScreenViewController
-            self.navigationController?.pushViewController(toVC, animated: true)
+            self.tabBarController?.selectedIndex = 0
         }
         else {
             tableView.reloadData() // reload the table view to remove the table view cell of the record from the table view
