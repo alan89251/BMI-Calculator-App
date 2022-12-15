@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -127,6 +126,8 @@
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IKO-bA-nFT">
                                 <rect key="frame" x="304" y="346" width="70" height="31"/>
+                                <color key="backgroundColor" red="1" green="0.75686274509803919" blue="0.027450980392156862" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.12941176470588234" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Submit"/>
                                 <connections>
@@ -135,6 +136,8 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GQE-eD-yeX">
                                 <rect key="frame" x="315" y="397" width="59" height="31"/>
+                                <color key="backgroundColor" red="1" green="0.75686274509803919" blue="0.027450980392156862" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.12941176470588234" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Done"/>
                                 <connections>
@@ -143,7 +146,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6ln-jf-GSf"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.86274509803921573" green="0.92941176470588238" blue="0.78431372549019607" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="2U0-Cg-LXg" firstAttribute="leading" secondItem="TZi-k0-aca" secondAttribute="leading" id="6AO-ht-7Bl"/>
                             <constraint firstItem="ySz-Su-V25" firstAttribute="leading" secondItem="2cD-GW-bxa" secondAttribute="trailing" constant="8" symbolic="YES" id="6X2-mb-o8g"/>
@@ -221,10 +224,10 @@
             </objects>
             <point key="canvasLocation" x="788" y="847"/>
         </scene>
-        <!--View Controller-->
+        <!--Root View Controller-->
         <scene sceneID="fbv-g4-fgO">
             <objects>
-                <tabBarController id="A2U-Yr-feH" customClass="ViewController" customModule="BMI_Calculator_App" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController id="A2U-Yr-feH" customClass="RootViewController" customModule="BMI_Calculator_App" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BLZ-7l-ZWA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -246,7 +249,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="0tg-ID-Uy6">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.86274509803921573" green="0.92941176470588238" blue="0.78431372549019607" alpha="1" colorSpace="calibratedRGB"/>
                         <connections>
                             <outlet property="dataSource" destination="fyQ-ei-Xg4" id="h9Y-xG-Upf"/>
                             <outlet property="delegate" destination="fyQ-ei-Xg4" id="3my-nE-IQ6"/>
@@ -255,6 +258,7 @@
                     <tabBarItem key="tabBarItem" title="BMI Tracking" id="4Ak-xy-BpW"/>
                     <navigationItem key="navigationItem" title="BMI Tracking" id="cGz-Jv-RnJ">
                         <barButtonItem key="leftBarButtonItem" title="Add" id="963-nI-Jw9">
+                            <color key="tintColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.12941176470588234" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="btnAdd_onClicked:" destination="fyQ-ei-Xg4" id="g57-fL-UwR"/>
                             </connections>
@@ -299,6 +303,8 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m1F-hV-XLj">
                                 <rect key="frame" x="160" y="368" width="70" height="31"/>
+                                <color key="backgroundColor" red="1" green="0.75686274509803919" blue="0.027450980392156862" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.12941176470588234" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Submit"/>
                                 <connections>
@@ -307,7 +313,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="U7P-y7-fxV"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.86274509803921573" green="0.92941176470588238" blue="0.78431372549019607" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="m1F-hV-XLj" firstAttribute="top" secondItem="hHU-Uj-clF" secondAttribute="bottom" constant="8" symbolic="YES" id="KBL-kX-UEC"/>
                             <constraint firstItem="7sh-kf-tXg" firstAttribute="top" secondItem="U7P-y7-fxV" secondAttribute="top" id="SNU-0z-pft"/>
@@ -364,6 +370,8 @@
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H0f-cj-s0F">
                                 <rect key="frame" x="160" y="368" width="70" height="31"/>
+                                <color key="backgroundColor" red="1" green="0.75686274509803919" blue="0.027450980392156862" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.12941176470588234" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Submit"/>
                                 <connections>
@@ -372,7 +380,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7VR-k3-Mhn"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.86274509803921573" green="0.92941176470588238" blue="0.78431372549019607" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="rmh-V0-SVX" firstAttribute="centerX" secondItem="4EC-HL-oaS" secondAttribute="centerX" id="2mw-ED-IhW"/>
                             <constraint firstItem="P82-BT-sKc" firstAttribute="centerX" secondItem="4EC-HL-oaS" secondAttribute="centerX" id="4kl-lM-YBz"/>
@@ -413,9 +421,4 @@
             <point key="canvasLocation" x="788" y="92"/>
         </scene>
     </scenes>
-    <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>

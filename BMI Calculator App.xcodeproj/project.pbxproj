@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		91097F63294868F000DF881C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91097F62294868F000DF881C /* AppDelegate.swift */; };
 		91097F65294868F000DF881C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91097F64294868F000DF881C /* SceneDelegate.swift */; };
-		91097F67294868F000DF881C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91097F66294868F000DF881C /* ViewController.swift */; };
+		91097F67294868F000DF881C /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91097F66294868F000DF881C /* RootViewController.swift */; };
 		91097F6A294868F000DF881C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91097F68294868F000DF881C /* Main.storyboard */; };
 		91097F6C294868F200DF881C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91097F6B294868F200DF881C /* Assets.xcassets */; };
 		91097F6F294868F200DF881C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91097F6D294868F200DF881C /* LaunchScreen.storyboard */; };
@@ -28,7 +28,7 @@
 		91097F5F294868F000DF881C /* BMI Calculator App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BMI Calculator App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		91097F62294868F000DF881C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91097F64294868F000DF881C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		91097F66294868F000DF881C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		91097F66294868F000DF881C /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		91097F69294868F000DF881C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		91097F6B294868F200DF881C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		91097F6E294868F200DF881C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -76,7 +76,7 @@
 			children = (
 				91097F62294868F000DF881C /* AppDelegate.swift */,
 				91097F64294868F000DF881C /* SceneDelegate.swift */,
-				91097F66294868F000DF881C /* ViewController.swift */,
+				91097F66294868F000DF881C /* RootViewController.swift */,
 				91097F68294868F000DF881C /* Main.storyboard */,
 				91097F6B294868F200DF881C /* Assets.xcassets */,
 				91097F6D294868F200DF881C /* LaunchScreen.storyboard */,
@@ -173,7 +173,7 @@
 				91E028232949A67B00A826A3 /* BMIRecordList.swift in Sources */,
 				91FA2F6C2949605F0000C4D0 /* BMITrackingTableViewCell.swift in Sources */,
 				91E028212949A5B600A826A3 /* BMIRecord.swift in Sources */,
-				91097F67294868F000DF881C /* ViewController.swift in Sources */,
+				91097F67294868F000DF881C /* RootViewController.swift in Sources */,
 				91A10408294871EC00B63793 /* PersonalInformationScreenViewController.swift in Sources */,
 				91097F63294868F000DF881C /* AppDelegate.swift in Sources */,
 				91097F65294868F000DF881C /* SceneDelegate.swift in Sources */,
