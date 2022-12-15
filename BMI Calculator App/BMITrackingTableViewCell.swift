@@ -8,6 +8,7 @@
 import UIKit
 
 protocol BMITrackingTableViewCellDelegate: AnyObject {
+    func didUpdateBmiRecordAndTableViewCell(record: BMIRecord)
     func didDeleteBmiRecordAndTableViewCell(record: BMIRecord)
 }
 
@@ -36,6 +37,11 @@ class BMITrackingTableViewCell: UITableViewCell {
         dateFormatter.dateFormat = "yyyy/MM/dd"
         dateFormatter.locale = Locale(identifier: "ca")
         dateLabel.text = dateFormatter.string(from: record.date)
+    }
+    
+    /// delegate to the table view controller to handle the actions of update the BMI record
+    @IBAction func btnUpdate_onTouchUpInside(_ sender: UIButton) {
+        delegate?.didUpdateBmiRecordAndTableViewCell(record: record!)
     }
     
     /// delegate to the table view controller to handle the actions of delete the BMI record

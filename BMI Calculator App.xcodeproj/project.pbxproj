@@ -14,6 +14,7 @@
 		91097F6C294868F200DF881C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91097F6B294868F200DF881C /* Assets.xcassets */; };
 		91097F6F294868F200DF881C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91097F6D294868F200DF881C /* LaunchScreen.storyboard */; };
 		91234A91294AB39800BC5EAC /* AddBmiRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91234A90294AB39800BC5EAC /* AddBmiRecordViewController.swift */; };
+		91234A93294AC83A00BC5EAC /* UpdateBmiRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91234A92294AC83A00BC5EAC /* UpdateBmiRecordViewController.swift */; };
 		91A10408294871EC00B63793 /* PersonalInformationScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A10407294871EC00B63793 /* PersonalInformationScreenViewController.swift */; };
 		91D36C4B294A8ED500A9D408 /* PersonalInformationScreenSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D36C4A294A8ED500A9D408 /* PersonalInformationScreenSetting.swift */; };
 		91E028212949A5B600A826A3 /* BMIRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E028202949A5B600A826A3 /* BMIRecord.swift */; };
@@ -33,6 +34,7 @@
 		91097F6E294868F200DF881C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		91097F70294868F200DF881C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91234A90294AB39800BC5EAC /* AddBmiRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBmiRecordViewController.swift; sourceTree = "<group>"; };
+		91234A92294AC83A00BC5EAC /* UpdateBmiRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateBmiRecordViewController.swift; sourceTree = "<group>"; };
 		91A10407294871EC00B63793 /* PersonalInformationScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInformationScreenViewController.swift; sourceTree = "<group>"; };
 		91D36C4A294A8ED500A9D408 /* PersonalInformationScreenSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInformationScreenSetting.swift; sourceTree = "<group>"; };
 		91E028202949A5B600A826A3 /* BMIRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMIRecord.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				91E028222949A67B00A826A3 /* BMIRecordList.swift */,
 				91D36C4A294A8ED500A9D408 /* PersonalInformationScreenSetting.swift */,
 				91234A90294AB39800BC5EAC /* AddBmiRecordViewController.swift */,
+				91234A92294AC83A00BC5EAC /* UpdateBmiRecordViewController.swift */,
 			);
 			path = "BMI Calculator App";
 			sourceTree = "<group>";
@@ -163,6 +166,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91234A93294AC83A00BC5EAC /* UpdateBmiRecordViewController.swift in Sources */,
 				91234A91294AB39800BC5EAC /* AddBmiRecordViewController.swift in Sources */,
 				91FA2F6929495F9A0000C4D0 /* BMITrackingScreenTableViewController.swift in Sources */,
 				91D36C4B294A8ED500A9D408 /* PersonalInformationScreenSetting.swift in Sources */,

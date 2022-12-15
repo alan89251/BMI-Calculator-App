@@ -274,7 +274,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weight:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7sh-kf-tXg">
-                                <rect key="frame" x="165" y="44" width="59" height="21"/>
+                                <rect key="frame" x="165.66666666666666" y="44" width="59" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -292,7 +292,7 @@
                                 <rect key="frame" x="35" y="144" width="320" height="216"/>
                             </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dnp-Ch-4R7">
-                                <rect key="frame" x="174" y="115" width="41" height="21"/>
+                                <rect key="frame" x="174.66666666666666" y="115" width="41" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -328,7 +328,72 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tlU-ou-VmL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2609" y="92"/>
+            <point key="canvasLocation" x="2602" y="-221"/>
+        </scene>
+        <!--Update Bmi Record View Controller-->
+        <scene sceneID="Bhd-gg-0Ag">
+            <objects>
+                <viewController storyboardIdentifier="UpdateBmiRecord" id="geB-Pd-3pV" customClass="UpdateBmiRecordViewController" customModule="BMI_Calculator_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4EC-HL-oaS">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weight:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vNC-d5-fSU">
+                                <rect key="frame" x="165.66666666666666" y="44" width="59" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P82-BT-sKc">
+                                <rect key="frame" x="145" y="73" width="100" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="Hju-tM-fTw"/>
+                                    <constraint firstAttribute="width" constant="100" id="aRM-cK-4k5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="agA-1M-sZV">
+                                <rect key="frame" x="174.66666666666666" y="115" width="41" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="rmh-V0-SVX">
+                                <rect key="frame" x="35" y="144" width="320" height="216"/>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H0f-cj-s0F">
+                                <rect key="frame" x="160" y="368" width="70" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Submit"/>
+                                <connections>
+                                    <action selector="btnSubmit_onTouchUpInside:" destination="geB-Pd-3pV" eventType="touchUpInside" id="brN-lu-06E"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7VR-k3-Mhn"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rmh-V0-SVX" firstAttribute="centerX" secondItem="4EC-HL-oaS" secondAttribute="centerX" id="2mw-ED-IhW"/>
+                            <constraint firstItem="P82-BT-sKc" firstAttribute="centerX" secondItem="4EC-HL-oaS" secondAttribute="centerX" id="4kl-lM-YBz"/>
+                            <constraint firstItem="H0f-cj-s0F" firstAttribute="top" secondItem="rmh-V0-SVX" secondAttribute="bottom" constant="8" symbolic="YES" id="ANC-Iu-88s"/>
+                            <constraint firstItem="vNC-d5-fSU" firstAttribute="top" secondItem="7VR-k3-Mhn" secondAttribute="top" id="Azc-eJ-Swg"/>
+                            <constraint firstItem="H0f-cj-s0F" firstAttribute="centerX" secondItem="4EC-HL-oaS" secondAttribute="centerX" id="Eec-Uj-v6f"/>
+                            <constraint firstItem="rmh-V0-SVX" firstAttribute="top" secondItem="agA-1M-sZV" secondAttribute="bottom" constant="8" symbolic="YES" id="WK5-xm-XVi"/>
+                            <constraint firstItem="agA-1M-sZV" firstAttribute="top" secondItem="P82-BT-sKc" secondAttribute="bottom" constant="8" symbolic="YES" id="dv7-us-Rg8"/>
+                            <constraint firstItem="P82-BT-sKc" firstAttribute="top" secondItem="vNC-d5-fSU" secondAttribute="bottom" constant="8" symbolic="YES" id="e78-0C-dks"/>
+                            <constraint firstItem="vNC-d5-fSU" firstAttribute="centerX" secondItem="4EC-HL-oaS" secondAttribute="centerX" id="lra-Go-EPq"/>
+                            <constraint firstItem="agA-1M-sZV" firstAttribute="centerX" secondItem="4EC-HL-oaS" secondAttribute="centerX" id="oRg-7v-GJv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="datePicker" destination="rmh-V0-SVX" id="AS3-lY-gu5"/>
+                        <outlet property="weightTextField" destination="P82-BT-sKc" id="Con-Cb-MQ5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XcH-ds-Xu6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2602" y="513"/>
         </scene>
         <!--BMI Tracking-->
         <scene sceneID="4c5-YV-Mfm">

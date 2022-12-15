@@ -53,6 +53,15 @@ class BMITrackingScreenTableViewController: UITableViewController {
 }
 
 extension BMITrackingScreenTableViewController: BMITrackingTableViewCellDelegate {
+    /// handle the actions of update the BMI record
+    func didUpdateBmiRecordAndTableViewCell(record: BMIRecord) {
+        // navigate to the update bmi record screen
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let toVC = storyboard.instantiateViewController(withIdentifier: "UpdateBmiRecord") as! UpdateBmiRecordViewController
+        toVC.setBmiRecord(bmiRecord: record)
+        self.navigationController?.pushViewController(toVC, animated: true)
+    }
+    
     /// handle the actions of delete the BMI record
     func didDeleteBmiRecordAndTableViewCell(record: BMIRecord) {
         bmiRecordList.removeRecord(record: record) // delete the BMI record from the list and the persistant storage

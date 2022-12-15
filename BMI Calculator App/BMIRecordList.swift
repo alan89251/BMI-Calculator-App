@@ -32,7 +32,13 @@ class BMIRecordList {
         saveBMIRecordList()
     }
     
-    /// remove bmi record from the list and delete it from the persistent storage
+    /// update the bmi record on the list and update it in the persistent storage
+    func updateRecord(record: BMIRecord) {
+        bmiRecords[record.id] = record
+        saveBMIRecordList()
+    }
+    
+    /// remove the bmi record from the list and delete it from the persistent storage
     func removeRecord(record: BMIRecord) {
         bmiRecords[record.id] = nil
         saveBMIRecordList()
