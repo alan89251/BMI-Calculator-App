@@ -7,12 +7,12 @@
 
 import Foundation
 
-/// Manage the bmi record list in memory and the persistant storage
+/// Manage the bmi record list in memory and the persistent storage
 class BMIRecordList {
     static let sharedBMIRecordList = BMIRecordList()
     private(set) var bmiRecords: [String: BMIRecord]
     
-    /// load the bim records from UserDefaults (persistant storage)
+    /// load the bim records from UserDefaults (persistent storage)
     init() {
         bmiRecords = [:]
         let defaults = UserDefaults.standard
@@ -22,7 +22,7 @@ class BMIRecordList {
         }
     }
     
-    /// add a bmi record to the list and save it to the persistant storage
+    /// add a bmi record to the list and save it to the persistent storage
     func addRecord(bmiRecord: BMIRecord) {
         let newBmiRecord = BMIRecord(id: UUID().uuidString,
                                      weight: bmiRecord.weight,
@@ -32,7 +32,7 @@ class BMIRecordList {
         saveBMIRecordList()
     }
     
-    /// remove bmi record from the list and delete it from the persistant storage
+    /// remove bmi record from the list and delete it from the persistent storage
     func removeRecord(record: BMIRecord) {
         bmiRecords[record.id] = nil
         saveBMIRecordList()
@@ -48,7 +48,7 @@ class BMIRecordList {
         return bmiRecords.count
     }
     
-    /// save the bmi record list to the persistant storage
+    /// save the bmi record list to the persistent storage
     private func saveBMIRecordList() {
         if let encoded = try? JSONEncoder().encode(bmiRecords) {
             let defaults = UserDefaults.standard

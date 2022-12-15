@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// data structure for bmi record
 struct BMIRecord: Codable {
     internal var id: String
     var weight: Double

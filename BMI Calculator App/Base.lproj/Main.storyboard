@@ -92,8 +92,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BMI Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iu6-8F-mh1">
-                                <rect key="frame" x="16" y="259" width="78" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BMI Score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iu6-8F-mh1">
+                                <rect key="frame" x="16" y="259" width="83" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -108,8 +108,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BMI Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P9u-eZ-gCp">
-                                <rect key="frame" x="16" y="317" width="121" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BMI Description:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P9u-eZ-gCp">
+                                <rect key="frame" x="16" y="317" width="126" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -132,11 +132,19 @@
                                 </segments>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IKO-bA-nFT">
-                                <rect key="frame" x="315" y="375" width="59" height="31"/>
+                                <rect key="frame" x="304" y="375" width="70" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Submit"/>
+                                <connections>
+                                    <action selector="btnSubmit_onTouchUpInside:" destination="xqR-j1-FAo" eventType="touchUpInside" id="kmB-eK-B5s"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GQE-eD-yeX">
+                                <rect key="frame" x="315" y="426" width="59" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Done"/>
                                 <connections>
-                                    <action selector="btnDone_onTouchUpInside:" destination="xqR-j1-FAo" eventType="touchUpInside" id="YfW-kn-IhE"/>
+                                    <action selector="btnDone_onTouchUpInside:" destination="xqR-j1-FAo" eventType="touchUpInside" id="g4N-bD-98J"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -147,6 +155,7 @@
                             <constraint firstItem="2U0-Cg-LXg" firstAttribute="leading" secondItem="TZi-k0-aca" secondAttribute="leading" id="6AO-ht-7Bl"/>
                             <constraint firstItem="ySz-Su-V25" firstAttribute="leading" secondItem="2cD-GW-bxa" secondAttribute="trailing" constant="8" symbolic="YES" id="6X2-mb-o8g"/>
                             <constraint firstItem="czv-dh-0Pe" firstAttribute="top" secondItem="6ln-jf-GSf" secondAttribute="top" id="6gW-Q6-isG"/>
+                            <constraint firstItem="6ln-jf-GSf" firstAttribute="trailing" secondItem="GQE-eD-yeX" secondAttribute="trailing" constant="16" id="7gp-te-NUy"/>
                             <constraint firstItem="T3r-G1-DWN" firstAttribute="leading" secondItem="6ln-jf-GSf" secondAttribute="leading" constant="16" id="7y9-3P-IQP"/>
                             <constraint firstItem="Tc2-Hw-oLd" firstAttribute="width" secondItem="a5t-my-FYo" secondAttribute="width" id="8bH-7z-Ujc"/>
                             <constraint firstItem="TZi-k0-aca" firstAttribute="width" secondItem="a5t-my-FYo" secondAttribute="width" id="A2R-T1-jLt"/>
@@ -171,6 +180,7 @@
                             <constraint firstItem="a5t-my-FYo" firstAttribute="top" secondItem="7B3-SO-hfq" secondAttribute="bottom" constant="8" symbolic="YES" id="ejS-u4-7Yy"/>
                             <constraint firstItem="P9u-eZ-gCp" firstAttribute="top" secondItem="u0E-fZ-zQg" secondAttribute="bottom" constant="8" symbolic="YES" id="fnj-3i-kGF"/>
                             <constraint firstItem="TZi-k0-aca" firstAttribute="height" secondItem="a5t-my-FYo" secondAttribute="height" id="gSX-Ex-LfZ"/>
+                            <constraint firstItem="GQE-eD-yeX" firstAttribute="top" secondItem="IKO-bA-nFT" secondAttribute="bottom" constant="20" id="hKK-sv-bPq"/>
                             <constraint firstItem="gcM-m6-ABj" firstAttribute="top" secondItem="a5t-my-FYo" secondAttribute="bottom" constant="8" symbolic="YES" id="ieo-Nh-7WC"/>
                             <constraint firstItem="u0E-fZ-zQg" firstAttribute="leading" secondItem="6ln-jf-GSf" secondAttribute="leading" constant="16" id="jM1-T1-AgC"/>
                             <constraint firstItem="ySz-Su-V25" firstAttribute="top" secondItem="gVy-6q-5b1" secondAttribute="bottom" constant="8" symbolic="YES" id="l9b-WV-mva"/>
@@ -189,9 +199,8 @@
                     <navigationItem key="navigationItem" id="Abp-Wo-UiD"/>
                     <connections>
                         <outlet property="ageTextField" destination="Tc2-Hw-oLd" id="98u-4b-pOO"/>
-                        <outlet property="bmiDescriptionLabel" destination="T3r-G1-DWN" id="lTL-kH-tHY"/>
+                        <outlet property="bmiMessageLabel" destination="T3r-G1-DWN" id="lTL-kH-tHY"/>
                         <outlet property="bmiScoreLabel" destination="u0E-fZ-zQg" id="MPp-7o-iCb"/>
-                        <outlet property="doneButton" destination="IKO-bA-nFT" id="cSh-yn-gRk"/>
                         <outlet property="genderTextField" destination="TZi-k0-aca" id="rC5-jp-cbM"/>
                         <outlet property="heightTextField" destination="A2A-3M-4Ba" id="5Fx-0O-eXy"/>
                         <outlet property="nameTextField" destination="a5t-my-FYo" id="u3o-iK-Vpl"/>
