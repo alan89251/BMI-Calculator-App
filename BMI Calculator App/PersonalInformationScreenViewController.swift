@@ -37,39 +37,7 @@ class PersonalInformationScreenViewController: UIViewController {
         bmiProgressView.subviews[1].clipsToBounds = true
         
         // set the UIs by the settings loaded from the persistent storage
-        nameTextField.text = personalInformation.getName() ?? ""
-        ageTextField.text = personalInformation.getAge() != nil
-            ? String(personalInformation.getAge()!)
-            : ""
-        genderTextField.text = personalInformation.getGender() ?? ""
-        heightTextField.text = personalInformation.getHeight() != nil
-            ? String(personalInformation.getHeight()!)
-            : ""
-        weightTextField.text = personalInformation.getWeight() != nil
-            ? String(personalInformation.getWeight()!)
-            : ""
-        if (personalInformation.getUnit() == nil
-            || personalInformation.getUnit()! == "") {
-            unitSegmentedControl.selectedSegmentIndex = 0
-        }
-        else if (personalInformation.getUnit()! == "Metric") {
-            unitSegmentedControl.selectedSegmentIndex = 0
-        }
-        else {
-            unitSegmentedControl.selectedSegmentIndex = 1
-        }
-        
-        // set the UIs of the BMI score and BMI message
-        if (personalInformation.getHeight() != nil && personalInformation.getWeight() != nil) {
-            var bmiScore = calculateBMI(height: personalInformation.getHeight()!, weight: personalInformation.getWeight()!, unit: personalInformation.getUnit()!)
-            // round the bmi score to 1 d.p.
-            bmiScore = round(bmiScore * 10.0) / 10.0
-            bmiScoreLabel.text = String(bmiScore)
-            bmiMessageLabel.text = getBMIMessage(bmiScore: bmiScore)
-            
-            // set the colour and the progress of the progress bar in proportion to the user's BMI
-            setBmiProgressBar(bmiScore: bmiScore)
-        }
+        resetScreen()
     }
     
     /// handle the event when the submit button is clicked
@@ -97,7 +65,7 @@ class PersonalInformationScreenViewController: UIViewController {
         let unit = unitSegmentedControl.titleForSegment(at: unitSegmentedControl.selectedSegmentIndex)!
         personalInformation.setUnit(unit: unit)
         
-        // only calculate the bmi and add the bmi record if weight and height is not nil
+        // add the bmi record and set the UIs of the BMI score, BMI message, BMI progress bar
         if (heightTextField.text != nil && heightTextField.text! != ""
             && weightTextField.text != nil && weightTextField.text! != "") {
             var bmiScore = calculateBMI(height: height, weight: weight, unit: unit)
@@ -124,6 +92,49 @@ class PersonalInformationScreenViewController: UIViewController {
     @IBAction func btnDone_onTouchUpInside(_ sender: UIButton) {
         // navigate to the BMI Tracking screen
         self.tabBarController?.selectedIndex = 1
+    }
+    
+    /// reset the screen to its original state
+    /// that set all the values of the UI controls to the values loaded from the persistent storage
+    @IBAction func btnReset_onTouchUpInside(_ sender: UIButton) {
+        resetScreen()
+    }
+    
+    /// reset the UIs by the settings loaded from the persistent storage
+    private func resetScreen() {
+        nameTextField.text = personalInformation.getName() ?? ""
+        ageTextField.text = personalInformation.getAge() != nil
+            ? String(personalInformation.getAge()!)
+            : ""
+        genderTextField.text = personalInformation.getGender() ?? ""
+        heightTextField.text = personalInformation.getHeight() != nil
+            ? String(personalInformation.getHeight()!)
+            : ""
+        weightTextField.text = personalInformation.getWeight() != nil
+            ? String(personalInformation.getWeight()!)
+            : ""
+        if (personalInformation.getUnit() == nil
+            || personalInformation.getUnit()! == "") {
+            unitSegmentedControl.selectedSegmentIndex = 0
+        }
+        else if (personalInformation.getUnit()! == "Metric") {
+            unitSegmentedControl.selectedSegmentIndex = 0
+        }
+        else {
+            unitSegmentedControl.selectedSegmentIndex = 1
+        }
+        
+        // set the UIs of the BMI score, BMI message, BMI progress bar
+        if (personalInformation.getHeight() != nil && personalInformation.getWeight() != nil) {
+            var bmiScore = calculateBMI(height: personalInformation.getHeight()!, weight: personalInformation.getWeight()!, unit: personalInformation.getUnit()!)
+            // round the bmi score to 1 d.p.
+            bmiScore = round(bmiScore * 10.0) / 10.0
+            bmiScoreLabel.text = String(bmiScore)
+            bmiMessageLabel.text = getBMIMessage(bmiScore: bmiScore)
+            
+            // set the colour and the progress of the progress bar in proportion to the user's BMI
+            setBmiProgressBar(bmiScore: bmiScore)
+        }
     }
     
     /// calculate the BMI

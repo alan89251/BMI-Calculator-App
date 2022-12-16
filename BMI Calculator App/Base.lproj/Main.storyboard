@@ -150,6 +150,16 @@
                                     <constraint firstAttribute="width" constant="250" id="iwk-Su-2MH"/>
                                 </constraints>
                             </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3s0-Jg-Fya">
+                                <rect key="frame" x="313" y="493" width="61" height="31"/>
+                                <color key="backgroundColor" red="0.45882352941176469" green="0.45882352941176469" blue="0.45882352941176469" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.12941176470588234" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Reset"/>
+                                <connections>
+                                    <action selector="btnReset_onTouchUpInside:" destination="xqR-j1-FAo" eventType="touchUpInside" id="Ii2-9I-Bg0"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6ln-jf-GSf"/>
                         <color key="backgroundColor" red="0.86274509803921573" green="0.92941176470588238" blue="0.78431372549019607" alpha="1" colorSpace="calibratedRGB"/>
@@ -162,6 +172,7 @@
                             <constraint firstItem="TZi-k0-aca" firstAttribute="width" secondItem="a5t-my-FYo" secondAttribute="width" id="A2R-T1-jLt"/>
                             <constraint firstItem="2cD-GW-bxa" firstAttribute="width" secondItem="A2A-3M-4Ba" secondAttribute="width" id="DQg-Wr-g2b"/>
                             <constraint firstItem="7B3-SO-hfq" firstAttribute="top" secondItem="6ln-jf-GSf" secondAttribute="top" id="Ebf-7Q-0UI"/>
+                            <constraint firstItem="3s0-Jg-Fya" firstAttribute="top" secondItem="GQE-eD-yeX" secondAttribute="bottom" constant="65" id="GaJ-dB-6wU"/>
                             <constraint firstItem="2cD-GW-bxa" firstAttribute="top" secondItem="gVy-6q-5b1" secondAttribute="bottom" constant="8" symbolic="YES" id="GyU-97-QOR"/>
                             <constraint firstItem="7B3-SO-hfq" firstAttribute="leading" secondItem="a5t-my-FYo" secondAttribute="leading" id="Hvr-vk-4ys"/>
                             <constraint firstItem="Tc2-Hw-oLd" firstAttribute="height" secondItem="a5t-my-FYo" secondAttribute="height" id="JKo-qe-sYT"/>
@@ -188,6 +199,7 @@
                             <constraint firstItem="ySz-Su-V25" firstAttribute="top" secondItem="gVy-6q-5b1" secondAttribute="bottom" constant="8" symbolic="YES" id="l9b-WV-mva"/>
                             <constraint firstItem="Tc2-Hw-oLd" firstAttribute="centerX" secondItem="WdY-28-XZ9" secondAttribute="centerX" id="lln-iU-12f"/>
                             <constraint firstItem="TZi-k0-aca" firstAttribute="top" secondItem="2U0-Cg-LXg" secondAttribute="bottom" constant="8" symbolic="YES" id="n4v-e4-x7S"/>
+                            <constraint firstItem="6ln-jf-GSf" firstAttribute="trailing" secondItem="3s0-Jg-Fya" secondAttribute="trailing" constant="16" id="nDD-BK-scn"/>
                             <constraint firstItem="T3r-G1-DWN" firstAttribute="top" secondItem="P9u-eZ-gCp" secondAttribute="bottom" constant="8" symbolic="YES" id="ov9-QC-GKy"/>
                             <constraint firstItem="Tc2-Hw-oLd" firstAttribute="top" secondItem="jhR-hi-p4n" secondAttribute="bottom" constant="8" symbolic="YES" id="pTu-LK-8gY"/>
                             <constraint firstItem="P9u-eZ-gCp" firstAttribute="leading" secondItem="6ln-jf-GSf" secondAttribute="leading" constant="16" id="sRW-EC-3Pr"/>
