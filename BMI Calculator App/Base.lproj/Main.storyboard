@@ -144,6 +144,12 @@
                                     <action selector="btnDone_onTouchUpInside:" destination="xqR-j1-FAo" eventType="touchUpInside" id="g4N-bD-98J"/>
                                 </connections>
                             </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gce-hI-gpR">
+                                <rect key="frame" x="16" y="373" width="250" height="4"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="iwk-Su-2MH"/>
+                                </constraints>
+                            </progressView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6ln-jf-GSf"/>
                         <color key="backgroundColor" red="0.86274509803921573" green="0.92941176470588238" blue="0.78431372549019607" alpha="1" colorSpace="calibratedRGB"/>
@@ -159,6 +165,7 @@
                             <constraint firstItem="2cD-GW-bxa" firstAttribute="top" secondItem="gVy-6q-5b1" secondAttribute="bottom" constant="8" symbolic="YES" id="GyU-97-QOR"/>
                             <constraint firstItem="7B3-SO-hfq" firstAttribute="leading" secondItem="a5t-my-FYo" secondAttribute="leading" id="Hvr-vk-4ys"/>
                             <constraint firstItem="Tc2-Hw-oLd" firstAttribute="height" secondItem="a5t-my-FYo" secondAttribute="height" id="JKo-qe-sYT"/>
+                            <constraint firstItem="gce-hI-gpR" firstAttribute="leading" secondItem="6ln-jf-GSf" secondAttribute="leading" constant="16" id="Kdq-kv-6rU"/>
                             <constraint firstItem="a5t-my-FYo" firstAttribute="leading" secondItem="6ln-jf-GSf" secondAttribute="leading" constant="16" id="Ltc-EZ-TUl"/>
                             <constraint firstItem="jhR-hi-p4n" firstAttribute="top" secondItem="6ln-jf-GSf" secondAttribute="top" id="OIm-Wd-wyX"/>
                             <constraint firstItem="Iu6-8F-mh1" firstAttribute="top" secondItem="A2A-3M-4Ba" secondAttribute="bottom" constant="8" symbolic="YES" id="PNv-Ky-jaJ"/>
@@ -185,6 +192,7 @@
                             <constraint firstItem="Tc2-Hw-oLd" firstAttribute="top" secondItem="jhR-hi-p4n" secondAttribute="bottom" constant="8" symbolic="YES" id="pTu-LK-8gY"/>
                             <constraint firstItem="P9u-eZ-gCp" firstAttribute="leading" secondItem="6ln-jf-GSf" secondAttribute="leading" constant="16" id="sRW-EC-3Pr"/>
                             <constraint firstItem="2U0-Cg-LXg" firstAttribute="top" secondItem="6ln-jf-GSf" secondAttribute="top" id="t7L-DB-dBm"/>
+                            <constraint firstItem="gce-hI-gpR" firstAttribute="top" secondItem="T3r-G1-DWN" secondAttribute="bottom" constant="35" id="uBD-sG-9MY"/>
                             <constraint firstItem="Iu6-8F-mh1" firstAttribute="leading" secondItem="6ln-jf-GSf" secondAttribute="leading" constant="16" id="uKL-ZY-ChE"/>
                             <constraint firstItem="u0E-fZ-zQg" firstAttribute="top" secondItem="Iu6-8F-mh1" secondAttribute="bottom" constant="8" symbolic="YES" id="ySG-wQ-hqb"/>
                             <constraint firstItem="6ln-jf-GSf" firstAttribute="trailing" secondItem="TZi-k0-aca" secondAttribute="trailing" constant="16" id="zY7-dh-tMv"/>
@@ -195,6 +203,7 @@
                     <connections>
                         <outlet property="ageTextField" destination="Tc2-Hw-oLd" id="98u-4b-pOO"/>
                         <outlet property="bmiMessageLabel" destination="T3r-G1-DWN" id="lTL-kH-tHY"/>
+                        <outlet property="bmiProgressView" destination="gce-hI-gpR" id="r9a-5a-znc"/>
                         <outlet property="bmiScoreLabel" destination="u0E-fZ-zQg" id="MPp-7o-iCb"/>
                         <outlet property="genderTextField" destination="TZi-k0-aca" id="rC5-jp-cbM"/>
                         <outlet property="heightTextField" destination="A2A-3M-4Ba" id="5Fx-0O-eXy"/>

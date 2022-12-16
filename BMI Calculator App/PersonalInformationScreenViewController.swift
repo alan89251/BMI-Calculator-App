@@ -22,11 +22,19 @@ class PersonalInformationScreenViewController: UIViewController {
     @IBOutlet weak var unitSegmentedControl: UISegmentedControl!
     @IBOutlet weak var bmiScoreLabel: UILabel!
     @IBOutlet weak var bmiMessageLabel: UILabel!
+    @IBOutlet weak var bmiProgressView: UIProgressView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         bmiRecordList = BMIRecordList.sharedBMIRecordList
         personalInformation = PersonalInformationScreenSetting.sharedPersonalInformationScreenSetting
+        
+        // set the style of the bmi progress bar
+        bmiProgressView.transform = bmiProgressView.transform.scaledBy(x: 1, y: 4)
+        bmiProgressView.layer.cornerRadius = 8
+        bmiProgressView.clipsToBounds = true
+        bmiProgressView.layer.sublayers![1].cornerRadius = 8
+        bmiProgressView.subviews[1].clipsToBounds = true
         
         // set the UIs by the settings loaded from the persistent storage
         nameTextField.text = personalInformation.getName() ?? ""
@@ -57,10 +65,11 @@ class PersonalInformationScreenViewController: UIViewController {
             // round the bmi score to 1 d.p.
             bmiScore = round(bmiScore * 10.0) / 10.0
             bmiScoreLabel.text = String(bmiScore)
-            
             bmiMessageLabel.text = getBMIMessage(bmiScore: bmiScore)
+            
+            // set the colour and the progress of the progress bar in proportion to the user's BMI
+            setBmiProgressBar(bmiScore: bmiScore)
         }
-        
     }
     
     /// handle the event when the submit button is clicked
@@ -105,6 +114,9 @@ class PersonalInformationScreenViewController: UIViewController {
             // display the BMI score and BMI message
             bmiScoreLabel.text = String(bmiScore)
             bmiMessageLabel.text = getBMIMessage(bmiScore: bmiScore)
+            
+            // set the colour and the progress of the progress bar in proportion to the user's BMI
+            setBmiProgressBar(bmiScore: bmiScore)
         }
     }
     
@@ -150,6 +162,42 @@ class PersonalInformationScreenViewController: UIViewController {
         }
         else {
             return "Obese Class III"
+        }
+    }
+    
+    /// set the colour and the progress of the progress bar in proportion to the user's BMI
+    private func setBmiProgressBar(bmiScore: Double) {
+        if (bmiScore < 16.0) {
+            bmiProgressView.progress = 0.125
+            bmiProgressView.progressTintColor = UIColor.red
+        }
+        else if (bmiScore < 17.0) {
+            bmiProgressView.progress = 0.25
+            bmiProgressView.progressTintColor = UIColor.orange
+        }
+        else if (bmiScore < 18.5) {
+            bmiProgressView.progress = 0.375
+            bmiProgressView.progressTintColor = UIColor.yellow
+        }
+        else if (bmiScore < 25.0) {
+            bmiProgressView.progress = 0.5
+            bmiProgressView.progressTintColor = UIColor.green
+        }
+        else if (bmiScore < 30.0) {
+            bmiProgressView.progress = 0.625
+            bmiProgressView.progressTintColor = UIColor.yellow
+        }
+        else if (bmiScore < 35.0) {
+            bmiProgressView.progress = 0.75
+            bmiProgressView.progressTintColor = UIColor.orange
+        }
+        else if (bmiScore <= 40.0) {
+            bmiProgressView.progress = 0.875
+            bmiProgressView.progressTintColor = UIColor.red
+        }
+        else {
+            bmiProgressView.progress = 1.0
+            bmiProgressView.progressTintColor = UIColor.purple
         }
     }
 }
