@@ -19,11 +19,12 @@ class BMITrackingScreenTableViewController: UITableViewController {
         
         tableView.register(BMITrackingTableViewCell.nib(), forCellReuseIdentifier: BMITrackingTableViewCell.identifier)
         tableView.dataSource = self
-        tableView.rowHeight = 120
+        tableView.rowHeight = 68
     }
     
     /// reload and update the bmi record list every time when the view is switched to
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         tableView.reloadData()
     }
     

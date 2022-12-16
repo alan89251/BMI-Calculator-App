@@ -31,6 +31,15 @@ class BMITrackingTableViewCell: UITableViewCell {
     
     /// configure the content of UIs of the cell
     func configure(record: BMIRecord, row: Int) {
+        // set gesture recognizer for this cell to detect swipe left gesture
+        var swipeLeftGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(onSwipeLeftGesture))
+        swipeLeftGestureRecognizer.direction = .left
+        self.addGestureRecognizer(swipeLeftGestureRecognizer)
+        // set gesture recognizer for this cell to detect swipe right gesture
+        var swipeRightGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(onSwipeRightGesture))
+        swipeRightGestureRecognizer.direction = .right
+        self.addGestureRecognizer(swipeRightGestureRecognizer)
+        
         // save the record in the cell
         self.record = record
         
@@ -43,14 +52,18 @@ class BMITrackingTableViewCell: UITableViewCell {
         dateLabel.text = dateFormatter.string(from: record.date)
     }
     
-    /// delegate to the table view controller to handle the actions of update the BMI record
-    @IBAction func btnUpdate_onTouchUpInside(_ sender: UIButton) {
-        delegate?.didUpdateBmiRecordAndTableViewCell(record: record!)
+    /// handle the swipe left gesture for this cell
+    /// this gesture trigger the actions of delete the BMI record
+    @objc private func onSwipeLeftGesture(sender: UISwipeGestureRecognizer) {
+        // delegate to the table view controller to handle the actions of delete the BMI record
+        delegate?.didDeleteBmiRecordAndTableViewCell(record: record!)
     }
     
-    /// delegate to the table view controller to handle the actions of delete the BMI record
-    @IBAction func btnDelete_onTouchUpInside(_ sender: UIButton) {
-        delegate?.didDeleteBmiRecordAndTableViewCell(record: record!)
+    /// handle the swipe right gesture for this cell
+    /// this gesture trigger the actions of update the BMI record
+    @objc private func onSwipeRightGesture(sender: UISwipeGestureRecognizer) {
+        // delegate to the table view controller to handle the actions of update the BMI record
+        delegate?.didUpdateBmiRecordAndTableViewCell(record: record!)
     }
     
     override func awakeFromNib() {
