@@ -28,25 +28,28 @@ class AddBmiRecordViewController: UIViewController {
 
     /// do the actions when user click the submit button
     @IBAction func btnSubmit_onTouchUpInside(_ sender: UIButton) {
-        let height = personalInformation.getHeight()! // get the height from the user setting
-        let weight = Double(weightTextField.text!)!
-        let date = datePicker.date
-        let unit = personalInformation.getUnit()! // get the unit of the weight and height from the user setting
-        var bmiScore = calculateBMI(height: height, weight: weight, unit: unit)
-        // round the bmi score to 1 d.p.
-        bmiScore = round(bmiScore * 10.0) / 10.0
-        
-        // add the bmi record to the list and save it to persistent storage
-        bmiRecordList.addRecord(bmiRecord: BMIRecord(id: "",
-                                                     weight: weight,
-                                                     bmi: bmiScore,
-                                                     date: date)
-        )
-        
-        // navigate to the BMI Tracking screen
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let toVC = storyboard.instantiateViewController(withIdentifier: "BMITrackingScreen") as! BMITrackingScreenTableViewController
-        self.navigationController?.pushViewController(toVC, animated: true)
+        // only add the bmi record if the weight is not nil
+        if (weightTextField.text != nil && weightTextField.text! != "") {
+            let height = personalInformation.getHeight()! // get the height from the user setting
+            let weight = Double(weightTextField.text!)!
+            let date = datePicker.date
+            let unit = personalInformation.getUnit()! // get the unit of the weight and height from the user setting
+            var bmiScore = calculateBMI(height: height, weight: weight, unit: unit)
+            // round the bmi score to 1 d.p.
+            bmiScore = round(bmiScore * 10.0) / 10.0
+            
+            // add the bmi record to the list and save it to persistent storage
+            bmiRecordList.addRecord(bmiRecord: BMIRecord(id: "",
+                                                         weight: weight,
+                                                         bmi: bmiScore,
+                                                         date: date)
+            )
+            
+            // navigate to the BMI Tracking screen
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let toVC = storyboard.instantiateViewController(withIdentifier: "BMITrackingScreen") as! BMITrackingScreenTableViewController
+            self.navigationController?.pushViewController(toVC, animated: true)
+        }
     }
     
     /// calculate the BMI

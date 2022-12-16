@@ -40,7 +40,8 @@ class PersonalInformationScreenViewController: UIViewController {
         weightTextField.text = personalInformation.getWeight() != nil
             ? String(personalInformation.getWeight()!)
             : ""
-        if (personalInformation.getUnit() == nil) {
+        if (personalInformation.getUnit() == nil
+            || personalInformation.getUnit()! == "") {
             unitSegmentedControl.selectedSegmentIndex = 0
         }
         else if (personalInformation.getUnit()! == "Metric") {
@@ -65,33 +66,46 @@ class PersonalInformationScreenViewController: UIViewController {
     /// handle the event when the submit button is clicked
     @IBAction func btnSubmit_onTouchUpInside(_ sender: UIButton) {
         // save personal information to the persistent storage
-        let name = nameTextField.text!
-        personalInformation.setName(name: name)
-        let age = Int(ageTextField.text!)!
-        personalInformation.setAge(age: age)
-        let gender = genderTextField.text!
-        personalInformation.setGender(gender: gender)
-        let height = Double(heightTextField.text!)!
-        personalInformation.setHeight(height: height)
-        let weight = Double(weightTextField.text!)!
-        personalInformation.setWeight(weight: weight)
+        if (nameTextField.text != nil && nameTextField.text! != "") {
+            personalInformation.setName(name: nameTextField.text!)
+        }
+        if (ageTextField.text != nil && ageTextField.text! != "") {
+            personalInformation.setAge(age: Int(ageTextField.text!)!)
+        }
+        if (genderTextField.text != nil && genderTextField.text! != "") {
+            personalInformation.setGender(gender: genderTextField.text!)
+        }
+        var height = 0.0
+        if (heightTextField.text != nil && heightTextField.text! != "") {
+            height = Double(heightTextField.text!)!
+            personalInformation.setHeight(height: height)
+        }
+        var weight = 0.0
+        if (weightTextField.text != nil && weightTextField.text! != "") {
+            weight = Double(weightTextField.text!)!
+            personalInformation.setWeight(weight: weight)
+        }
         let unit = unitSegmentedControl.titleForSegment(at: unitSegmentedControl.selectedSegmentIndex)!
         personalInformation.setUnit(unit: unit)
         
-        var bmiScore = calculateBMI(height: height, weight: weight, unit: unit)
-        // round the bmi score to 1 d.p.
-        bmiScore = round(bmiScore * 10.0) / 10.0
-        
-        // add the bmi record to the list and save it into the persistant storage
-        bmiRecordList.addRecord(bmiRecord: BMIRecord(id: "",
-                                                     weight: weight,
-                                                     bmi: bmiScore,
-                                                     date: Date.now) // use current date as the date of the record
-        )
-        
-        // display the BMI score and BMI message
-        bmiScoreLabel.text = String(bmiScore)
-        bmiMessageLabel.text = getBMIMessage(bmiScore: bmiScore)
+        // only calculate the bmi and add the bmi record if weight and height is not nil
+        if (heightTextField.text != nil && heightTextField.text! != ""
+            && weightTextField.text != nil && weightTextField.text! != "") {
+            var bmiScore = calculateBMI(height: height, weight: weight, unit: unit)
+            // round the bmi score to 1 d.p.
+            bmiScore = round(bmiScore * 10.0) / 10.0
+            
+            // add the bmi record to the list and save it into the persistant storage
+            bmiRecordList.addRecord(bmiRecord: BMIRecord(id: "",
+                                                         weight: weight,
+                                                         bmi: bmiScore,
+                                                         date: Date.now) // use current date as the date of the record
+            )
+            
+            // display the BMI score and BMI message
+            bmiScoreLabel.text = String(bmiScore)
+            bmiMessageLabel.text = getBMIMessage(bmiScore: bmiScore)
+        }
     }
     
     /// handle the event when the done button is clicked

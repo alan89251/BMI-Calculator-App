@@ -35,21 +35,24 @@ class UpdateBmiRecordViewController: UIViewController {
 
     /// do the actions when user click the submit button
     @IBAction func btnSubmit_onTouchUpInside(_ sender: UIButton) {
-        let height = personalInformation.getHeight()! // get the height from the user setting
-        bmiRecord!.weight = Double(weightTextField.text!)!
-        bmiRecord!.date = datePicker.date
-        let unit = personalInformation.getUnit()! // get the unit of the weight and height from the user setting
-        let bmiScore = calculateBMI(height: height, weight: bmiRecord!.weight, unit: unit)
-        // round the bmi score to 1 d.p.
-        bmiRecord!.bmi = round(bmiScore * 10.0) / 10.0
-        
-        // update the bmi record on the list and update it in the persistent storage
-        bmiRecordList.updateRecord(record: bmiRecord!)
-        
-        // navigate to the BMI Tracking screen
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let toVC = storyboard.instantiateViewController(withIdentifier: "BMITrackingScreen") as! BMITrackingScreenTableViewController
-        self.navigationController?.pushViewController(toVC, animated: true)
+        // only update the bmi record if the weight is not nil
+        if (weightTextField.text != nil && weightTextField.text! != "") {
+            let height = personalInformation.getHeight()! // get the height from the user setting
+            bmiRecord!.weight = Double(weightTextField.text!)!
+            bmiRecord!.date = datePicker.date
+            let unit = personalInformation.getUnit()! // get the unit of the weight and height from the user setting
+            let bmiScore = calculateBMI(height: height, weight: bmiRecord!.weight, unit: unit)
+            // round the bmi score to 1 d.p.
+            bmiRecord!.bmi = round(bmiScore * 10.0) / 10.0
+            
+            // update the bmi record on the list and update it in the persistent storage
+            bmiRecordList.updateRecord(record: bmiRecord!)
+            
+            // navigate to the BMI Tracking screen
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let toVC = storyboard.instantiateViewController(withIdentifier: "BMITrackingScreen") as! BMITrackingScreenTableViewController
+            self.navigationController?.pushViewController(toVC, animated: true)
+        }
     }
     
     /// calculate the BMI
